@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css">
+    <style>
+      /* body {
+        font-family: 'Arial', sans-serif;
+        background-color: #E1D7C6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .logo img {
+        max-width: 150px;
+      }
+
+      .menu-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .menu-item {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .menu-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      } */
+
+      .sticky-name {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        z-index: 1000;
+      }
+
+      body {
+            font-family: 'Arial', sans-serif;
+            background-color: #E1D7C6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        .menu-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+            padding-top: 150%;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        .menu-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="https://seeklogo.com/images/K/kfc-logo-FDCFEC4860-seeklogo.com.png" alt="Restaurant Logo">
+      </div>
+      <div class="menu-gallery pswp-gallery" id="menu-gallery">
+        <a href="#" data-pswp-src="https://www.yummytummyaarthi.com/wp-content/uploads/2023/08/kfc-chicken-1.jpeg" data-pswp-width="800" data-pswp-height="560" data-cropped="true" class="menu-item">
+            <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2023/08/kfc-chicken-1.jpeg" alt="Menu 1">
+          </a>
+          <a href="#" data-pswp-src="https://kfcprodimages-ehcsdud6a5a5eqcm.z01.azurefd.net/cmsimages/kfc/egy/imagestemp/50-Combo.png" data-pswp-width="390" data-pswp-height="390" data-cropped="true" class="menu-item">
+            <img src="https://kfcprodimages-ehcsdud6a5a5eqcm.z01.azurefd.net/cmsimages/kfc/egy/imagestemp/50-Combo.png" alt="Menu 1">
+          </a>
+          <a href="#" data-pswp-src="https://kfcprodimages-ehcsdud6a5a5eqcm.z01.azurefd.net/cmsimages/kfc/imagestemp/MixMatch_EG14_En_030624.jpg" data-pswp-width="915" data-pswp-height="474" data-cropped="true" class="menu-item">
+            <img src="https://kfcprodimages-ehcsdud6a5a5eqcm.z01.azurefd.net/cmsimages/kfc/imagestemp/MixMatch_EG14_En_030624.jpg" alt="Menu 1">
+          </a>
+      </div>
+    </div>
+    <div class="sticky-name"> Giant </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js"></script>
+    <script>
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#menu-gallery',
+        children: 'a',
+        pswpModule: PhotoSwipe
+      });
+      lightbox.init();
+    </script>
+  </body>
+</html>
